@@ -1,0 +1,57 @@
+/* 1. Nhận xét (comment out) kiểu dáng hiện có cho phần tử li */
+/* 
+li {
+  list-style: none;
+  display: inline;
+} 
+*/
+
+/* 2. Thay đổi phần tử nav: khối nội tuyến (inline-block) và chiều rộng 80% */
+nav {
+  display: inline-block;
+  width: 80%;
+}
+
+/* 3. Bộ chọn hậu duệ: Tạo kiểu cho hình ảnh TRONG nav có chiều rộng 10% */
+nav img {
+  width: 10%;
+}
+
+/* 4. Tạo kiểu cho lớp .grid: lưới 2 cột, mỗi cột khoảng 40% */
+/* 5. Điều chỉnh justify-content, align-items, row-gap cho .grid */
+.grid {
+  display: grid;
+  grid-template-columns: 40% 40%;
+  justify-content: space-between; /* Hoặc center / space-around tùy ảnh mẫu */
+  align-items: center;            /* Hoặc start / stretch */
+  row-gap: 20px;                  /* Khoảng cách giữa các hàng */
+}
+
+/* 6. Bộ chọn hậu duệ: Chỉ tạo kiểu cho hình ảnh TRONG lớp .grid có chiều rộng 100% */
+/* (Quy tắc này sẽ KHÔNG làm ảnh hưởng đến hình ảnh trong lớp .flex) */
+.grid img {
+  width: 100%;
+}
+
+/* 7. Tạo kiểu cho lớp .flex: sử dụng flexbox, điều chỉnh flex-wrap và justify-content */
+.flex {
+  display: flex;
+  flex-wrap: wrap;                /* Cho phép các phần tử tự xuống hàng nếu thiếu chỗ */
+  justify-content: space-around;  /* Hoặc space-between / center tùy ảnh mẫu */
+}
+
+/* Mẹo bổ sung về Truy cập (Accessibility): 
+   Ẩn liên kết "Skip to Main Content" và chỉ hiển thị khi bấm Tab/Focus */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000000;
+  color: #ffffff;                 /* Đảm bảo độ tương phản màu tốt cho WAVE */
+  padding: 8px;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
